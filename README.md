@@ -4,78 +4,6 @@
 
 This is a LaTeX template for typesetting documents for tabletop games.
 
-## Features
-
-* Color schemes, fonts, and layout are close to the core books (but not exactly the same).
-* TeX Live includes the default fonts.
-* Works with pdfTeX, LuaTeX, and XeTeX.
-
-![Preview](scrot.jpg)
-
-## Installation
-
-There are three options for using this project; choose the one that's
-right for you.
-
-### User install using `TEXMFHOME` (recommended)
-
-This will install the template for your current user in one of the following locations:
-
-* Linux: `~/.texmf/tex/latex`
-* OS X / macOS: `~/Library/texmf/tex/latex`
-* Windows: `C:\Users\{username}\texmf\tex\latex`
-
-LaTeX will find the package automatically.
-
-1. Prepare your `TEXMFHOME` directory.
-
-    ```sh
-    mkdir "$(kpsewhich -var-value TEXMFHOME)/tex/latex/"
-    ```
-
-2. Download the [latest release](https://github.com/rpgtex/DND-5e-LaTeX-Template/releases/latest) and extract it in `$TEXMFHOME/tex/latex/`.
-
-    ```sh
-    wget https://github.com/rpgtex/DND-5e-LaTeX-Template/archive/master.zip
-    unzip -d "$(kpsewhich -var-value TEXMFHOME)/tex/latex/" master.zip
-    cd "$(kpsewhich -var-value TEXMFHOME)/tex/latex/"
-    mv DND-5e-LaTeX-Template-master dnd
-    ```
-
-    Alternatively, clone the repo to the same location:
-
-    ```sh
-    git clone https://github.com/rpgtex/DND-5e-LaTeX-Template.git "$(kpsewhich -var-value TEXMFHOME)/tex/latex/dnd"
-    ```
-
-### Using Overleaf
-
-[Overleaf](https://overleaf.com) is an online TeX editor -- think
-about it like Google Docs for TeX documents.  This option does not
-require a local TeX installation and is an ideal approach for one-off
-projects.
-
-1. Download this GitHub repository as a ZIP archive using the *Clone
-   or download* link above.
-2. On Overleaf, click the *New Project* button and select *Upload
-   Project*.  Upload the ZIP archive you downloaded from this
-   repository.
-
-### Project install using `TEXINPUTS`
-
-You can also clone a copy of the repository to each LaTeX project. For example, to clone the repository to a `lib/` directory in your project:
-
-```sh
-mkdir lib/
-git clone https://github.com/rpgtex/DND-5e-LaTeX-Template.git lib/dnd
-```
-
-LaTeX will not find the template automatically. Set `TEXINPUTS` when compiling your project to locate the package:
-
-```sh
-TEXINPUTS=./lib//: pdflatex project.tex
-```
-
 ## Usage
 
 ### Class (recommended)
@@ -262,10 +190,6 @@ Install the appropriate plugin for your editor.
     ```
 
 6. [Create a new release](https://help.github.com/articles/creating-releases/) and attach the PDF and scrot.
-
-## Credits
-
-* Background image from [Lost and Taken](https://lostandtaken.com/)
 
 ## License
 
